@@ -59,31 +59,28 @@ The notebook workflow:
     FastText was used for alignment due to its robustness to rare/OOV words.
 
 
-  ## step_3: Load bilingual dictionary
+  ## step_3: Load bilingual dictionary &  Multilingual alignment
     details:
       - load MUSE English–French dictionary (en-fr.txt)
       - filter usable word pairs present in vocabularies
-
-  ## step_4: Multilingual alignment
-    details:
       - learn orthogonal Procrustes mapping
       - map English vectors into French embedding space
       - evaluate alignment with cosine similarity
 
-  ## step_5: Linguistic analysis
+  ## step_4: Linguistic analysis
     details:
       - synonyms vs antonyms similarity
       - translation (common word) similarity
       - polysemy example analysis (bank)
       - out-of-vocabulary (OOV) coverage
 
-  ## step_6: Visualization
+  ## step_5: Visualization
     details:
       - PCA projection of embeddings
       - t-SNE visualization of semantic clusters
       - multilingual PCA to inspect alignment quality
 
- ## step_7: Downstream task
+ ## step_6: Downstream task
     details:
       - build sentence embeddings by averaging word vectors
       - map English sentences into shared space
