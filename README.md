@@ -25,6 +25,10 @@ project/
 ```
 
 
+## ⭐ Open in Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
+(https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/01_workflow.ipynb)
 
 ---
 
@@ -179,9 +183,6 @@ Master: Data & Intelligence for Smart Systems (DISS)
 
 ---
 
-## ⭐ Open in Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/01_workflow.ipynb)
 
 
