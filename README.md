@@ -47,8 +47,11 @@ The notebook workflow:
 
   ## step_2: Train word embeddings
     details:
-      - train Word2Vec embeddings
-      - train FastText embeddings (subword-aware)
+      - Word2Vec embeddings
+      - FastText embeddings (subword-aware)
+      - GloVe pretrained zip file and load weights
+      - OOV Handling
+      - Visualization
 
   ## step_3: Load bilingual dictionary
     details:
