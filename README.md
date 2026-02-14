@@ -14,7 +14,7 @@ This project builds and aligns English and French word embeddings into a shared 
 ## Data
 
 - **Parallel corpus**: `data/Sentence pairs in English-French - 2026-02-12.tsv` https://tatoeba.org/en/downloads (Tatoeba format: id_en, english, id_fr, french)
-- **GloVe** (optional): Download [glove.6B.zip](https://nlp.stanford.edu/projects/glove/) and place in `data/`. If missing, the code falls back to Word2Vec.
+- **GloVe**: Download [glove.6B.zip](https://nlp.stanford.edu/projects/glove/) and place in `data/`. If missing, the code falls back to Word2Vec.
 - **Bilingual dictionary**:  MUSE English–French dictionary (en-fr.txt) used as supervised translation pairs for alignment. Filtered to retain only word pairs present in both embedding vocabularies.
  
 ## Repository Structure
