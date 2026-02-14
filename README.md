@@ -21,115 +21,117 @@ project/
 ├── NLP_Assignment1_Report.pdf # Final report (main deliverable)
 └── README.md # Project documentation
 
+---
+
+## ▶️ How to Run (Google Colab)
+
+1. Open the notebook in Colab.
+2. Run all cells sequentially.
+
+The notebook will:
+
+1. Load and preprocess the EN–FR parallel corpus  
+2. Train word embeddings (Word2Vec & FastText)  
+3. Load MUSE bilingual dictionary  
+4. Align embeddings using **Procrustes mapping**  
+5. Analyze semantic properties  
+6. Visualise embedding spaces  
+7. Train a language identification classifier  
 
 ---
 
-## Running the Project
+## 🔬 Methods Used
 
-### Open in Google Colab (recommended)
+### 🔹 Embeddings
+- Word2Vec  
+- FastText (subword-aware; used for alignment)
 
-1. Upload or open `01_workflow.ipynb` in Google Colab.
-2. Run all cells from top to bottom.
+### 🔹 Multilingual Alignment
+- MUSE bilingual dictionary (~113k pairs)
+- Orthogonal Procrustes mapping
+- English vectors mapped into French space
 
-If running locally, install dependencies:
+### 🔹 Linguistic Analysis
+- Synonyms vs antonyms similarity
+- Translation similarity (common words)
+- Polysemy example (*bank*)
+- OOV coverage evaluation
 
-```bash
-pip install gensim scikit-learn numpy matplotlib scipy
-Data
-Parallel English–French sentences (Tatoeba format)
+### 🔹 Visualization
+- PCA projection of embeddings
+- t-SNE semantic clustering
+- Multilingual PCA showing alignment
 
-MUSE bilingual dictionary (en-fr.txt) used for supervised alignment
+### 🔹 Downstream Task
+Language identification using aligned sentence embeddings.
 
-Large datasets are not included in this repository.
+---
 
-Workflow
-The notebook performs the following steps:
+## 📊 Results
 
-Load and preprocess the parallel corpus (tokenization & cleaning)
+### Multilingual Alignment
+- Alignment achieved using Procrustes mapping
+- Cosine similarities indicate meaningful shared space
 
-Train word embeddings (Word2Vec & FastText)
+### Linguistic Insights
+- Synonyms show moderate similarity
+- Antonyms may appear similar (distributional semantics effect)
+- FastText provides strong OOV handling
 
-Load MUSE bilingual dictionary
+### Downstream Classification
+Using aligned embeddings:
 
-Align English & French embeddings using Procrustes mapping
+- **Accuracy:** ≈ 97%  
+- **Precision:** ≈ 0.97  
+- **Recall:** ≈ 0.97  
+- **F1-score:** ≈ 0.97  
 
-Analyze linguistic properties:
+This confirms aligned embeddings retain meaningful linguistic structure.
 
-synonym vs antonym similarity
+---
 
-translation similarity
+## 📂 Output File
 
-polysemy example (bank)
-
-out-of-vocabulary (OOV) coverage
-
-Visualize embedding spaces using PCA and t-SNE
-
-Train a language identification classifier using aligned embeddings
-
-Output
-results_summary.json
+### `results_summary.json`
 Contains:
 
-alignment metrics
+- alignment metrics  
+- synonym vs antonym similarity  
+- common word similarity  
+- polysemy analysis  
+- OOV coverage  
+- classifier performance  
 
-synonym vs antonym similarity
+---
 
-common word similarity
+## 🧠 Key Takeaways
 
-polysemy analysis
+✔ FastText improves vocabulary coverage and robustness  
+✔ Procrustes alignment enables cross-lingual semantic mapping  
+✔ Distributional embeddings capture similarity but struggle with antonyms  
+✔ Visualization confirms successful alignment  
+✔ High classification accuracy validates embedding usefulness  
 
-OOV coverage
+---
 
-classifier performance
+## 🛠 Libraries Used
 
-Methods & Tools
-Embeddings: gensim (Word2Vec, FastText)
+- gensim  
+- scikit-learn  
+- numpy  
+- matplotlib  
+- scipy  
 
-Alignment: Orthogonal Procrustes mapping
+---
 
-Analysis: Cosine similarity & linguistic evaluation
+## 🎓 Academic Context
 
-Visualization: PCA & t-SNE (matplotlib, scikit-learn)
-
-Classifier: Logistic Regression on aligned sentence embeddings
-
-Results Summary
-Multilingual Alignment
-Procrustes mapping successfully aligned English vectors into French space.
-
-Cosine similarity indicates a meaningful shared semantic space.
-
-Linguistic Analysis
-Synonyms show moderate similarity.
-
-Antonyms may appear similar due to distributional semantics.
-
-FastText provides strong OOV handling.
-
-Downstream Task Performance
-Language identification using aligned embeddings:
-
-Accuracy: ≈ 97%
-
-Precision: ≈ 0.97
-
-Recall: ≈ 0.97
-
-F1-score: ≈ 0.97
-
-These results confirm the aligned embeddings retain meaningful linguistic structure.
-
-Key Insights
-✔ FastText improves vocabulary coverage and robustness
-✔ Procrustes alignment enables cross-lingual semantic mapping
-✔ Distributional embeddings capture similarity but struggle with antonyms
-✔ Visualization confirms successful alignment
-✔ High classification accuracy validates embedding usefulness
-
-Academic Context
-Université Claude Bernard Lyon 1
+Université Claude Bernard Lyon 1  
 Master: Data & Intelligence for Smart Systems (DISS)
 
-```
+---
+
+## ⭐ Open in Google Colab
+
+*(optional — add your Colab link here)*
 
