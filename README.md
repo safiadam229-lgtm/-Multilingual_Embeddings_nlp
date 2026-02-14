@@ -13,12 +13,14 @@ This project builds and aligns English and French word embeddings into a shared 
 
 repository_structure:
 
-  project:
-    - 01_workflow.ipynb: "Main Colab notebook (run all cells)"
-    - results_summary.json: "Alignment, analysis & classifier metrics"
-    - en-fr.txt: "MUSE bilingual dictionary used for alignment"
-    - NLP_Assignment1_Report.pdf: "Final report (main deliverable)"
-    - README.md: "Project documentation"
+## Repository Structure
+
+project/
+├── 01_workflow.ipynb # Main Colab notebook (run all cells)
+├── results_summary.json # Alignment, analysis & classifier metrics
+├── en-fr.txt # MUSE bilingual dictionary used for alignment
+├── NLP_Assignment1_Report.pdf # Final report (main deliverable)
+└── README.md # Project documentation
 
 
 ---
@@ -29,6 +31,7 @@ repository_structure:
 2. Run all cells sequentially.
 
 The notebook workflow:
+
   step_1:
     name: Load & preprocess corpus
     details:
