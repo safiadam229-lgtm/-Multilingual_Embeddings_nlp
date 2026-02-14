@@ -1,6 +1,6 @@
 # NLP Assignment: Multilingual Word Embeddings
 
-**Author:** ADAM Muhammad Safi Ullah | p2516297
+## **Author:** ADAM Muhammad Safi Ullah | p2516297
 
 Exploration and comparison of word embeddings for English and French, including alignment, analysis, and a downstream language identification task.
 ---
@@ -16,8 +16,7 @@ This project builds and aligns English and French word embeddings into a shared 
 - **Parallel corpus**: `data/Sentence pairs in English-French - 2026-02-12.tsv` (Tatoeba format: id_en, english, id_fr, french)
 - **GloVe** (optional): Download [glove.6B.zip](https://nlp.stanford.edu/projects/glove/) and place in `data/`. If missing, the code falls back to Word2Vec.
 - **Bilingual dictionary**:  MUSE English–French dictionary (en-fr.txt) used as supervised translation pairs for alignment. Filtered to retain only word pairs present in both embedding vocabularies.
-
-- 
+ 
 ## Repository Structure
 
 ```
