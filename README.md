@@ -41,7 +41,7 @@ The notebook workflow:
 
   ## step_1: Load & preprocess corpus
     details:
-      - load English–French parallel sentences
+      - load English–French parallel sentences - (source: https://tatoeba.org/en/downloads)
       - lowercase and clean text
       - tokenize sentences
 
