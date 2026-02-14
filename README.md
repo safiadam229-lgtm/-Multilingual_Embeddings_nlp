@@ -1,9 +1,8 @@
-# NLP Assignment 1: Multilingual Word Embeddings
+# NLP Assignment: Multilingual Word Embeddings
 
 **Author:** ADAM Muhammad Safi Ullah | p2516297
 
-Exploration and alignment of word embeddings for English and French, including linguistic analysis and a downstream language identification task.
-
+Exploration and comparison of word embeddings for English and French, including alignment, analysis, and a downstream language identification task.
 ---
 
 ## Project Overview
@@ -28,23 +27,65 @@ project/
 1. Open the notebook in Colab.
 2. Run all cells sequentially.
 
-The notebook will:
+The notebook workflow:
+  step_1:
+    name: Load & preprocess corpus
+    details:
+      - load English–French parallel sentences
+      - lowercase and clean text
+      - tokenize sentences
 
-1. Load and preprocess the EN–FR parallel corpus  
-2. Train word embeddings (Word2Vec & FastText)  
-3. Load MUSE bilingual dictionary  
-4. Align embeddings using **Procrustes mapping**  
-5. Analyze semantic properties  
-6. Visualise embedding spaces  
-7. Train a language identification classifier  
+  step_2:
+    name: Train word embeddings
+    details:
+      - train Word2Vec embeddings
+      - train FastText embeddings (subword-aware)
 
+  step_3:
+    name: Load bilingual dictionary
+    details:
+      - load MUSE English–French dictionary (en-fr.txt)
+      - filter usable word pairs present in vocabularies
+
+  step_4:
+    name: Multilingual alignment
+    details:
+      - learn orthogonal Procrustes mapping
+      - map English vectors into French embedding space
+      - evaluate alignment with cosine similarity
+
+  step_5:
+    name: Linguistic analysis
+    details:
+      - synonyms vs antonyms similarity
+      - translation (common word) similarity
+      - polysemy example analysis (bank)
+      - out-of-vocabulary (OOV) coverage
+
+  step_6:
+    name: Visualization
+    details:
+      - PCA projection of embeddings
+      - t-SNE visualization of semantic clusters
+      - multilingual PCA to inspect alignment quality
+
+  step_7:
+    name: Downstream task
+    details:
+      - build sentence embeddings by averaging word vectors
+      - map English sentences into shared space
+      - train Logistic Regression classifier
+      - evaluate language identification performance
 ---
 
 ## 🔬 Methods Used
 
 ### 🔹 Embeddings
+- One-Hot encoding
+- TF-iDF
 - Word2Vec  
 - FastText (subword-aware; used for alignment)
+- GloVe
 
 ### 🔹 Multilingual Alignment
 - MUSE bilingual dictionary (~113k pairs)
@@ -133,5 +174,7 @@ Master: Data & Intelligence for Smart Systems (DISS)
 
 ## ⭐ Open in Google Colab
 
-*(optional — add your Colab link here)*
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
+(https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/01_workflow.ipynb)
+
 
