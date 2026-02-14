@@ -17,9 +17,13 @@ repository_structure:
 
 project/
 ├── 01_workflow.ipynb # Main Colab notebook (run all cells)
+
 ├── results_summary.json # Alignment, analysis & classifier metrics
+
 ├── en-fr.txt # MUSE bilingual dictionary used for alignment
+
 ├── NLP_Assignment1_Report.pdf # Final report (main deliverable)
+
 └── README.md # Project documentation
 
 
