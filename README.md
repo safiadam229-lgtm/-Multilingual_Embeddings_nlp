@@ -39,49 +39,42 @@ project/
 
 The notebook workflow:
 
-  step_1:
-    name: Load & preprocess corpus
+  ## step_1: Load & preprocess corpus
     details:
       - load English–French parallel sentences
       - lowercase and clean text
       - tokenize sentences
 
-  step_2:
-    name: Train word embeddings
+  ## step_2: Train word embeddings
     details:
       - train Word2Vec embeddings
       - train FastText embeddings (subword-aware)
 
-  step_3:
-    name: Load bilingual dictionary
+  ## step_3: Load bilingual dictionary
     details:
       - load MUSE English–French dictionary (en-fr.txt)
       - filter usable word pairs present in vocabularies
 
-  step_4:
-    name: Multilingual alignment
+  ## step_4: Multilingual alignment
     details:
       - learn orthogonal Procrustes mapping
       - map English vectors into French embedding space
       - evaluate alignment with cosine similarity
 
-  step_5:
-    name: Linguistic analysis
+  ## step_5: Linguistic analysis
     details:
       - synonyms vs antonyms similarity
       - translation (common word) similarity
       - polysemy example analysis (bank)
       - out-of-vocabulary (OOV) coverage
 
-  step_6:
-    name: Visualization
+  ## step_6: Visualization
     details:
       - PCA projection of embeddings
       - t-SNE visualization of semantic clusters
       - multilingual PCA to inspect alignment quality
 
-  step_7:
-    name: Downstream task
+ ## step_7: Downstream task
     details:
       - build sentence embeddings by averaging word vectors
       - map English sentences into shared space
