@@ -28,7 +28,7 @@ project/
 ## ⭐ Open in Google Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/01_workflow.ipynb)
+(https://colab.research.google.com/drive/1Zu4ONhRJNYLT-nkaqwmy9aUBVmjPfLkH?usp=sharing)
 
 ---
 
